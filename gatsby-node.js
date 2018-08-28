@@ -41,7 +41,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((post, index) => {
-          console.log(post.node.fileAbsolutePath, post.node)
           const typeName = post.node.fileAbsolutePath.match(/src\/pages\/(.*?)\//)[1];
           const component = path.resolve(`./src/templates/${typeName}.js`);
 

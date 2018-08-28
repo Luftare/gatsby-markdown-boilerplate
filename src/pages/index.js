@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
+import Column from '../components/Column';
+
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title;
@@ -9,7 +11,7 @@ class BlogIndex extends React.Component {
     const events = this.props.data.events.edges;
 
     return (
-      <div>
+      <Column>
         <Helmet title={siteTitle} />
         {posts.map(({ node }) => {
           return (
@@ -25,12 +27,13 @@ class BlogIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h3><Link to={node.fields.slug}>{node.frontmatter.title}</Link></h3>
+              <div>{node.frontmatter.location}</div>
               <div>{node.frontmatter.date}</div>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
         })}
-      </div>
+      </Column>
     )
   }
 }

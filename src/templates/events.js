@@ -12,9 +12,8 @@ class EventTemplate extends React.Component {
 
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h4>{post.frontmatter.title}</h4>
-        <Hero src={post.frontmatter.featureImage.publicURL} />
+        <Helmet title={post.frontmatter.title} />
+        <Hero src={post.frontmatter.featureImage.publicURL}>{post.frontmatter.title}</Hero>
         <Column>
           <p>{post.frontmatter.date}</p>
           <p>{post.frontmatter.location}</p>
