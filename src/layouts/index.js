@@ -1,13 +1,17 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+import styled from 'styled-components';
+import './index.css';
+
+import Header from '../components/Header';
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
+    const { children } = this.props
 
     return (
       <div>
-        <h1>Hello.</h1>
+        <Header>Hello.</Header>
         {children()}
       </div>
     )

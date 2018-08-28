@@ -1,18 +1,17 @@
 {
-  "name": "gatsby-starter-blog",
-  "description": "Starter Gatsby Blog",
+  "name": "gatsby-markdown-boilerplate",
+  "description": "Gatsby markdown boilerplate",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
-  },
+  "author": "LF",
   "dependencies": {
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-remark-copy-linked-files": "^1.5.37",
     "gatsby-remark-images": "^1.5.61",
     "gatsby-source-filesystem": "^1.5.31",
-    "gatsby-transformer-remark": "^1.7.40"
+    "gatsby-transformer-remark": "^1.7.40",
+    "styled-components": "^3.4.5"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -20,16 +19,7 @@
     "gh-pages": "^1.1.0",
     "prettier": "^1.12.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
   "scripts": {
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",

@@ -1,6 +1,6 @@
 ---
 title: Wut again.
-date: "2019-05-01T22:12:03.284Z"
+date: "2019-05-01"
 ---
 
 ## Second time here!
