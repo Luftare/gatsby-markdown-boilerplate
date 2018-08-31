@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         `
           {
             allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }, limit: 1000
+              sort: { fields: [frontmatter___date], order: DESC }, limit: 100
             ) {
               edges {
                 node {
@@ -37,7 +37,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           reject(result.errors)
         }
 
-        // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((post, index) => {
